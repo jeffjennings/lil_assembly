@@ -19,3 +19,6 @@
 .global _start
 .intel_syntax noprefix
 
+_start:
+    # move the value 128 into the rdi register
+    mov rdi, 128
