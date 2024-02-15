@@ -10,7 +10,7 @@
 # gcc -o hello_world hello_world.o -nostdlib -static
 # step 3 - run via:
 # ./hello_world
-# step 4 - check output via:
+# step 4 - check custom error code:
 # echo $?
 # ===================
 
@@ -27,9 +27,9 @@ _start:
 
     # load: move object from memory into register
     # (treating the object in rsi as a pointer)
-    mov rdi, qword ptr [rsi]
+    # mov rdi, qword ptr [rsi]
     # store: move object in register into memory
-    mov qword ptr [rsi], rdi
+    # mov qword ptr [rsi], rdi
 
     # put appropriate value in registers for given syscall
     # (https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/).
@@ -40,7 +40,7 @@ _start:
     # load effective address (lea) of buffer containing string
     lea rsi, [hw_buff]
     # length of buffer string "Hello, World!\n"
-    mov rdx, 13
+    mov rdx, 14
     syscall
 
     # to invoke 'sys_exit', rax should store 60 and rdi should store a user-chosen error code
@@ -49,6 +49,6 @@ _start:
     mov rdi, 99
     syscall 
 
+# define hello world buffer
 hw_buff:
     .asciz "Hello, World!\n"
-    
