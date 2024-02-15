@@ -14,3 +14,8 @@
 # echo $?
 # ===================
 
+#  expose symbol 'start' to the linker to tell it 
+# where the code starts
+.global _start
+.intel_syntax noprefix
+
