@@ -26,6 +26,12 @@ _start:
     mov rsi, rdi
 
     # must put appropriate value in registers for given syscall
+    # (https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/).
+    # e.g., to invoke 'sys_exit', rax must have 60 and rdi must have error code
+    # we want processor to return on exit
+    mov rax, 60
+    mov rdi, 99
+    syscall 
 
 # load: move object from memory into register
 # (treating the object in rsi as a pointer)
