@@ -1,4 +1,6 @@
 # hello_world assembly routine on linux
+# follows https://www.youtube.com/watch?v=6S5KRJv-7RU&ab_channel=LowLevelLearning, 
+# with some additions
 
 # step 0 - install assembler 'as' and linker 'ld' to compile 
 # assembly code into machine code:
@@ -42,6 +44,10 @@ _start:
     # length of buffer string "Hello, World!\n"
     mov rdx, 14
     syscall
+
+    mov rax, 0 
+    mov rdi, 1
+
 
     # to invoke 'sys_exit', rax should store 60 and rdi should store a user-chosen error code
     # returned on exit
