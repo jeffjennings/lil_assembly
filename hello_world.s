@@ -2,20 +2,6 @@
 # follows https://www.youtube.com/watch?v=6S5KRJv-7RU&ab_channel=LowLevelLearning, 
 # with some additions
 
-# step 0 - install assembler 'as' and linker 'ld' to compile 
-# assembly code into machine code:
-# sudo apt install gcc
-# step 1 - assemble this script via: 
-# as hello_world.s -o hello_world.o
-# step 2 - compile this script 
-# (invoke linker to convert *.o into an executable ELF) via:
-# gcc -o hello_world hello_world.o -nostdlib -static
-# step 3 - run via:
-# ./hello_world
-# step 4 - check custom error code:
-# echo $?
-# ===================
-
 # expose symbol 'start' to the linker to tell it 
 # where the code starts
 .global _start
