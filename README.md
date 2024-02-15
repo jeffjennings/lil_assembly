@@ -14,6 +14,6 @@ Then (each time you update the code), for `hello_world.s` for example,
 - Step 4 (optional): check return value (e.g. an error code)
 
 `as hello_world.s -o hello_world.o`  
-`gcc -o hello_world hello_world.o -nostdlib -static`  
+`gcc hello_world.o -o hello_world -nostdlib -static`  
 `./hello_world`  
 `echo $?`  
