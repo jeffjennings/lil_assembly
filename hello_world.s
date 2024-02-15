@@ -22,3 +22,13 @@
 _start:
     # move the value 128 into the rdi register
     mov rdi, 128
+    # move the value in the rsi register into the rdi register
+    mov rsi, rdi
+
+    # must put appropriate value in registers for given syscall
+
+# load: move object from memory into register
+# (treating the object in rsi as a pointer)
+    # mov rdi, qword ptr [rsi]
+# store: move object in register into memory
+    # mov qword ptr [rsi], rdi
