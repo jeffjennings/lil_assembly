@@ -8,3 +8,9 @@
 # step 2 - compile this script 
 # (invoke linker to convert *.o into an executable ELF) via:
 # gcc -o hello_world hello_world.o -nostdlib -static
+# step 3 - run via:
+# hello_world
+# step 4 - check output via:
+# echo $?
+# ===================
+
