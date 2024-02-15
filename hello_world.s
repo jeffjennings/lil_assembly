@@ -34,7 +34,8 @@ _start:
     # mov qword ptr [rsi], rdi
 
     # put appropriate value in registers for given syscall
-    # (https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/).
+    # (https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+    # and https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md#x86_64-64_bit).
     # e.g., invoke 'sys_write' to print 'Hello world':
     mov rax, 1
     # file descriptor 1
