@@ -13,7 +13,7 @@ Then:
 - Step 3: run!
 - Step 4 (optional): check return value (e.g. an error code)
 
-For `hello_world.s` for example:
+For `hello_world.s` for example:  
 `as hello_world.s -o hello_world.o`  
 `gcc hello_world.o -o hello_world -nostdlib -static`  
 `./hello_world`  
